@@ -30,7 +30,6 @@ attr_accessor :x_coordinate, :y_coordinate, :direction
     elsif (direction = "S" && command == "L") || (direction = "N" && command == "R")
       @direction = "E"
     end
-
   end
 
 
@@ -46,10 +45,8 @@ attr_accessor :x_coordinate, :y_coordinate, :direction
     end
   end
 
+  def status
+    return "The rover is currently #{position_x}, #{position_y}, facing #{direction}"
+  end
 
 end
-
-
-
-
-  def status "The rover is currently #{position_x}, #{position_y}"
